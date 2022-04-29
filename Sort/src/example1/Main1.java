@@ -3,10 +3,7 @@ package example1;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- *
- * @author tadaki
- */
+
 public class Main1 {
 
     /**
@@ -22,8 +19,8 @@ public class Main1 {
             new Student("Ann", 6, 78),
             new Student("Beth", 7, 90)
         };
-//        BubbleSort<Student> sort = new BubbleSort<>(Arrays.asList(list));
-        MergeSort<Student> sort = new MergeSort<>(Arrays.asList(list));
+       BubbleSort<Student> sort = new BubbleSort<>(Arrays.asList(list));
+        // MergeSort<Student> sort = new MergeSort<>(Arrays.asList(list));
         List<Student> output = sort.sort();
         if (sort.isSorted()) {
             output.stream().forEachOrdered(s -> System.out.println(s));

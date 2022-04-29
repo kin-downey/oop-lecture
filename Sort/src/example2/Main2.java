@@ -4,10 +4,6 @@ import example1.Student;
 import java.util.Arrays;
 import java.util.List;
 
-/**
- *
- * @author tadaki
- */
 public class Main2 {
 
     /**
@@ -23,7 +19,8 @@ public class Main2 {
             new Student("Ann", 6, 78),
             new Student("Beth", 7, 90)
         };
-        AbstractSort<Student> sort = new MergeSort<>(Arrays.asList(list));
+        BubbleSort<Student> sort = new BubbleSort<>(Arrays.asList(list));
+        // AbstractSort<Student> sort = new MergeSort<>(Arrays.asList(list));
         List<Student> output = sort.sort();
         if (sort.isSorted()) {
             output.stream().forEachOrdered(s -> System.out.println(s));
